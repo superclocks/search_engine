@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{FD54A435-BA1D-4415-A395-A1CD65EF21D3}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Lan</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>./src/search;./src/document;./src/index;./src/analysis;./src/util;./src/store;./src/debug;./src/analysis/standard;./src;./src/config;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="src\analysis\AnalysisHeader.cpp" />
+    <ClCompile Include="src\analysis\Analyzers.cpp" />
+    <ClCompile Include="src\analysis\standard\StandardAnalyzer.cpp" />
+    <ClCompile Include="src\analysis\standard\StandardFilter.cpp" />
+    <ClCompile Include="src\analysis\standard\StandardTokenizer.cpp" />
+    <ClCompile Include="src\debug\MemTracking.cpp" />
+    <ClCompile Include="src\document\Document.cpp" />
+    <ClCompile Include="src\document\Field.cpp" />
+    <ClCompile Include="src\document\Posting.cpp" />
+    <ClCompile Include="src\document\PostingList.cpp" />
+    <ClCompile Include="src\index\DocumentWriter.cpp" />
+    <ClCompile Include="src\index\FieldInfos.cpp" />
+    <ClCompile Include="src\index\FieldsWriter.cpp" />
+    <ClCompile Include="src\index\IndexReader.cpp" />
+    <ClCompile Include="src\index\IndexWriter.cpp" />
+    <ClCompile Include="src\index\SegmentInfos.cpp" />
+    <ClCompile Include="src\index\Term.cpp" />
+    <ClCompile Include="src\index\TermInfo.cpp" />
+    <ClCompile Include="src\index\TermInfosWriter.cpp" />
+    <ClCompile Include="src\index\TermVectorReader.cpp" />
+    <ClCompile Include="src\index\Token.cpp" />
+    <ClCompile Include="src\search\Collector.cpp" />
+    <ClCompile Include="src\search\DocScorePair.cpp" />
+    <ClCompile Include="src\search\IndexSearcher.cpp" />
+    <ClCompile Include="src\search\Query.cpp" />
+    <ClCompile Include="src\search\QueryParser.cpp" />
+    <ClCompile Include="src\search\Scorer.cpp" />
+    <ClCompile Include="src\search\TermQuery.cpp" />
+    <ClCompile Include="src\search\TermScorer.cpp" />
+    <ClCompile Include="src\store\FSDirectory.cpp" />
+    <ClCompile Include="src\store\IndexOutput.cpp" />
+    <ClCompile Include="src\store\RAMDirectory.cpp" />
+    <ClCompile Include="src\store\TransactionalRAMDirectory.cpp" />
+    <ClCompile Include="src\util\Equators.cpp" />
+    <ClCompile Include="src\util\FastCharStream.cpp" />
+    <ClCompile Include="src\util\FileInPutStream.cpp" />
+    <ClCompile Include="src\util\Misc.cpp" />
+    <ClCompile Include="src\util\Reader.cpp" />
+    <ClCompile Include="src\util\StringBuffer.cpp" />
+    <ClCompile Include="src\util\StringIntern.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\analysis\AnalysisHeader.h" />
+    <ClInclude Include="src\analysis\Analyzers.h" />
+    <ClInclude Include="src\analysis\standard\StandardAnalyzer.h" />
+    <ClInclude Include="src\analysis\standard\StandardFilter.h" />
+    <ClInclude Include="src\analysis\standard\StandardTokenizer.h" />
+    <ClInclude Include="src\analysis\standard\StandardTokenizerConstants.h" />
+    <ClInclude Include="src\config\CompilerMsvc.h" />
+    <ClInclude Include="src\debug\Lanbase.h" />
+    <ClInclude Include="src\debug\mem.h" />
+    <ClInclude Include="src\document\Document.h" />
+    <ClInclude Include="src\document\Field.h" />
+    <ClInclude Include="src\document\Posting.h" />
+    <ClInclude Include="src\document\PostingList.h" />
+    <ClInclude Include="src\index\DocumentWriter.h" />
+    <ClInclude Include="src\index\FieldInfos.h" />
+    <ClInclude Include="src\index\FieldsWriter.h" />
+    <ClInclude Include="src\index\IndexReader.h" />
+    <ClInclude Include="src\index\IndexWriter.h" />
+    <ClInclude Include="src\index\SegmentInfos.h" />
+    <ClInclude Include="src\index\Term.h" />
+    <ClInclude Include="src\index\TermInfosWriter.h" />
+    <ClInclude Include="src\index\TermVector.h" />
+    <ClInclude Include="src\index\Token.h" />
+    <ClInclude Include="src\LConfig.h" />
+    <ClInclude Include="src\search\Collector.h" />
+    <ClInclude Include="src\search\DocScorePair.h" />
+    <ClInclude Include="src\search\IndexSearcher.h" />
+    <ClInclude Include="src\search\Query.h" />
+    <ClInclude Include="src\search\QueryParser.h" />
+    <ClInclude Include="src\search\Scorer.h" />
+    <ClInclude Include="src\search\TermQuery.h" />
+    <ClInclude Include="src\search\TermScorer.h" />
+    <ClInclude Include="src\store\Directory.h" />
+    <ClInclude Include="src\store\FSDirectory.h" />
+    <ClInclude Include="src\store\IndexOutput.h" />
+    <ClInclude Include="src\store\RAMDirectory.h" />
+    <ClInclude Include="src\store\TransactionalRAMDirectory.h" />
+    <ClInclude Include="src\util\BufferedStream.h" />
+    <ClInclude Include="src\util\Equators.h" />
+    <ClInclude Include="src\util\FastCharStream.h" />
+    <ClInclude Include="src\util\FileInPutStream.h" />
+    <ClInclude Include="src\util\InPutStreamBuffer.h" />
+    <ClInclude Include="src\util\Misc.h" />
+    <ClInclude Include="src\util\Reader.h" />
+    <ClInclude Include="src\util\StreamBase.h" />
+    <ClInclude Include="src\util\StringBuffer.h" />
+    <ClInclude Include="src\util\StringIntern.h" />
+    <ClInclude Include="src\util\StringReader.h" />
+    <ClInclude Include="src\util\SubInPutStream.h" />
+    <ClInclude Include="src\util\VoidList.h" />
+    <ClInclude Include="src\util\VoidMap.h" />
+    <ClInclude Include="TermInfo.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

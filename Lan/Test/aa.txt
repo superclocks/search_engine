@@ -1,0 +1,165 @@
+adfaf dafad ,fad 我是传奇C++读取文件txt，循环逐行输出（转） 
+笔记：C++文件的读取和写入
+
+
+#include <iostream>
+#include <iomanip>
+#include <fstream>
+
+using namespace std;
+
+int main(){
+char buffer[256];
+ifstream myfile ("c:\\a.txt");
+ofstream outfile("c:\\b.txt");
+
+if(!myfile){
+  cout << "Unable to open myfile";
+        exit(1); // terminate with error
+
+}
+if(!outfile){
+    cout << "Unable to open otfile";
+        exit(1); // terminate with error
+
+}
+int a,b;
+int i=0,j=0;
+int data[6][2];
+  while (! myfile.eof() )
+  {
+     myfile.getline (buffer,10);
+    sscanf(buffer,"%d %d",&a,&b);
+    cout<<a<<" "<<b<<endl;
+     data[i][0]=a;
+     data[i][1]=b;
+     i++;
+  }
+myfile.close();
+  for(int k=0;k<i;k++){
+      outfile<<data[k][0] <<" "<<data[k][1]<<endl;
+     cout<<data[k][0] <<" "<<data[k][1]<<endl;
+  }
+
+outfile.close();
+return 0;
+}
+
+ 
+
+无论读写都要包含<fstream>头文件
+
+读：从外部文件中将数据读到程序中来处理
+对于程序来说，是从外部读入数据，因此定义输入流，即定义输入流对象:ifsteam infile，infile就是输入流对象。
+这个对象当中存放即将从文件读入的数据流。假设有名字为myfile.txt的文件，存有两行数字数据，具体方法：
+int a,b;
+ifstream infile;
+infile.open("myfile.txt");      //注意文件的路径
+infile>>a>>b;                   //两行数据可以连续读出到变量里
+infile.close()
+
+如果是个很大的多行存储的文本型文件可以这么读：
+char buf[1024];                //临时保存读取出来的文件内容
+string message;
+ifstream infile;
+infile.open("myfile.js");
+if(infile.is_open())          //文件打开成功,说明曾经写入过东西
+{
+while(infile.good() && !infile.eof())
+{
+    memset(buf,0,1024);
+    infile.getline(buf,1204);
+    message = buf;
+    ......                     //这里可能对message做一些操作
+    cout<<message<<endl;
+}
+infile.close();
+}
+
+写：将程序中处理后的数据写到文件当中
+对程序来说是将数据写出去，即数据离开程序，因此定义输出流对象ofstream outfile，outfile就是输出流对象，这个对象用来存放将要写到文件当中的数据。具体做法：
+ofstream outfile;
+outfile.open("myfile.bat"); //myfile.bat是存放数据的文件名
+if(outfile.is_open())
+{
+outfile<<message<<endl;    //message是程序中处理的数据
+   outfile.close(); 
+}
+else
+{
+   cout<<"不能打开文件!"<<endl;
+}
+
+
+c++对文件的读写操作的例子
+
+/*/从键盘读入一行字符，把其中的字母依次放在磁盘文件fa2.dat中，再把它从磁盘文件读入程序，
+将其中的小写字母改成大写字母，再存入磁盘fa3.dat中*/ 
+＃i nclude<fstream>
+＃i nclude<iostream>
+＃i nclude<cmath>
+using namespace std;
+//////////////从键盘上读取字符的函数
+void read_save(){
+      char c[80];
+      ofstream outfile("f1.dat");//以输出方工打开文件
+      if(!outfile){
+                   cerr<<"open error!"<<endl;//注意是用的是cerr 
+                   exit(1);
+                   }
+          cin.getline(c,80);//从键盘读入一行字符
+          for(int i=0;c[i]!=0;i++) //对字符一个一个的处理，直到遇到'/0'为止 
+                if(c[i]>=65&&c[i]<=90||c[i]>=97&&c[i]<=122){//保证输入的字符是字符 
+                   outfile.put(c[i]);//将字母字符存入磁盘文件 
+                   cout<<c[i]<<"";
+                   }
+                   cout<<endl;
+                   outfile.close();
+                   }
+void creat_data(){
+      char ch;
+      ifstream infile("f1.dat",ios::in);//以输入的方式打开文件 
+      if(!infile){
+                  cerr<<"open error!"<<endl;
+                  exit(1);
+                  }
+    ofstream outfile("f3.dat");//定义输出流f3.dat文件
+    if(!outfile){
+                 cerr<<"open error!"<<endl;
+                 exit(1);
+                 }
+     while(infile.get(ch)){//当读取字符成功时 
+     if(ch<=122&&ch>=97)
+     ch=ch-32;
+     outfile.put(ch);
+     cout<<ch;
+     }
+     cout<<endl;
+     infile.close();
+     outfile.close();
+     }
+     int main(){
+         read_save();
+         creat_data();
+        system("pause");
+         return 0;
+         } 
+为了您的安全，请只打开来源可靠的网址
+打开网站    取消
+来自: http://hi.baidu.com/okisme/blog/item/cc7e784b0715032f08f7ef7f.html 
+   来自:  
+okisme 第一分享:  
+nainia007 时间: 2010-08-12 13:20 评论: 6条 投票: 1次 本贴分享: 34 累计分享: 35 共有1人发表观点
+色妹Q1685958200  ...或者输入其他标签词： nainia007的 博客 相关分享: 
+
+如何去掉JInternalFrame的标题栏
+
+巧用左轮三层更新+迷你菜单，打造游戏菜单...
+
+SQL日期格式转换
+
+打开文件时显示“不是有效的WIN32（应用）...
+评论(6) 
+    
+2011年04月18日 09:42 songyanru243
+有用

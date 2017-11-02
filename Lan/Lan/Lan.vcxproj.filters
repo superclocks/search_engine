@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\document">
+      <UniqueIdentifier>{38ba5881-9815-4d5c-916e-e91728467004}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\document">
+      <UniqueIdentifier>{f51b9ca3-4099-4c57-b5a4-74e933fcd42a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\analysis">
+      <UniqueIdentifier>{8519f18d-e450-48e1-bf7f-17c818373cac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\analysis">
+      <UniqueIdentifier>{d2901723-5940-4bb9-bb98-fa42276a2a22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\index">
+      <UniqueIdentifier>{3b295dbd-6078-4829-a1af-f67b6ba7c703}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\index">
+      <UniqueIdentifier>{453f7649-64a0-438c-9a8f-da830e0b8d22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\search">
+      <UniqueIdentifier>{fc120b2d-6e66-4006-8411-ba14b8dd07e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\search">
+      <UniqueIdentifier>{e0967ec7-d0d6-499a-adef-04252c3abfc5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\util">
+      <UniqueIdentifier>{7fd2890e-9bfb-4ec8-865a-f04c2c2f24fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\util">
+      <UniqueIdentifier>{fd906901-485d-41a3-bea5-e656f214ecf7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\store">
+      <UniqueIdentifier>{6106d899-e4bc-4d7e-9be2-261d2cae0c03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\store">
+      <UniqueIdentifier>{422a8c2a-5413-4ab6-af6d-7dcd9f3cc716}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\debug">
+      <UniqueIdentifier>{528a073f-d3cc-414b-bf5a-d41a9ce68410}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\debug">
+      <UniqueIdentifier>{35a3a5fa-0ac5-4b3a-b0e8-5d195237c7fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\analysis\standard">
+      <UniqueIdentifier>{32714552-4bc1-4a6f-8788-148fec48ae22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\analysis\standard">
+      <UniqueIdentifier>{46515df1-2841-45bf-afc3-b4a5d28ab834}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\config">
+      <UniqueIdentifier>{dc91ae75-e7a0-4d7b-8652-59c653d8d001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\config">
+      <UniqueIdentifier>{564eb9a4-65ee-4f39-80ea-4acaaf9dc57a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\document\Document.cpp">
+      <Filter>Source Files\document</Filter>
+    </ClCompile>
+    <ClCompile Include="src\document\Posting.cpp">
+      <Filter>Source Files\document</Filter>
+    </ClCompile>
+    <ClCompile Include="src\document\PostingList.cpp">
+      <Filter>Source Files\document</Filter>
+    </ClCompile>
+    <ClCompile Include="src\index\IndexWriter.cpp">
+      <Filter>Source Files\index</Filter>
+    </ClCompile>
+    <ClCompile Include="src\index\Token.cpp">
+      <Filter>Source Files\index</Filter>
+    </ClCompile>
+    <ClCompile Include="src\index\IndexReader.cpp">
+      <Filter>Source Files\index</Filter>
+    </ClCompile>
+    <ClCompile Include="src\search\Collector.cpp">
+      <Filter>Source Files\search</Filter>
+    </ClCompile>
+    <ClCompile Include="src\search\DocScorePair.cpp">
+      <Filter>Source Files\search</Filter>
+    </ClCompile>
+    <ClCompile Include="src\search\IndexSearcher.cpp">
+      <Filter>Source Files\search</Filter>
+    </ClCompile>
+    <ClCompile Include="src\search\Query.cpp">
+      <Filter>Source Files\search</Filter>
+    </ClCompile>
+    <ClCompile Include="src\search\QueryParser.cpp">
+      <Filter>Source Files\search</Filter>
+    </ClCompile>
+    <ClCompile Include="src\search\Scorer.cpp">
+      <Filter>Source Files\search</Filter>
+    </ClCompile>
+    <ClCompile Include="src\search\TermQuery.cpp">
+      <Filter>Source Files\search</Filter>
+    </ClCompile>
+    <ClCompile Include="src\search\TermScorer.cpp">
+      <Filter>Source Files\search</Filter>
+    </ClCompile>
+    <ClCompile Include="src\document\Field.cpp">
+      <Filter>Source Files\document</Filter>
+    </ClCompile>
+    <ClCompile Include="src\index\Term.cpp">
+      <Filter>Source Files\index</Filter>
+    </ClCompile>
+    <ClCompile Include="src\store\RAMDirectory.cpp">
+      <Filter>Source Files\store</Filter>
+    </ClCompile>
+    <ClCompile Include="src\store\TransactionalRAMDirectory.cpp">
+      <Filter>Source Files\store</Filter>
+    </ClCompile>
+    <ClCompile Include="src\analysis\AnalysisHeader.cpp">
+      <Filter>Source Files\analysis</Filter>
+    </ClCompile>
+    <ClCompile Include="src\store\FSDirectory.cpp">
+      <Filter>Source Files\store</Filter>
+    </ClCompile>
+    <ClCompile Include="src\util\Equators.cpp">
+      <Filter>Source Files\util</Filter>
+    </ClCompile>
+    <ClCompile Include="src\util\Misc.cpp">
+      <Filter>Source Files\util</Filter>
+    </ClCompile>
+    <ClCompile Include="src\util\StringIntern.cpp">
+      <Filter>Source Files\util</Filter>
+    </ClCompile>
+    <ClCompile Include="src\index\FieldInfos.cpp">
+      <Filter>Source Files\index</Filter>
+    </ClCompile>
+    <ClCompile Include="src\util\Reader.cpp">
+      <Filter>Source Files\util</Filter>
+    </ClCompile>
+    <ClCompile Include="src\util\FileInPutStream.cpp">
+      <Filter>Source Files\util</Filter>
+    </ClCompile>
+    <ClCompile Include="src\index\DocumentWriter.cpp">
+      <Filter>Source Files\index</Filter>
+    </ClCompile>
+    <ClCompile Include="src\analysis\standard\StandardAnalyzer.cpp">
+      <Filter>Source Files\analysis\standard</Filter>
+    </ClCompile>
+    <ClCompile Include="src\analysis\Analyzers.cpp">
+      <Filter>Source Files\analysis</Filter>
+    </ClCompile>
+    <ClCompile Include="src\analysis\standard\StandardTokenizer.cpp">
+      <Filter>Source Files\analysis\standard</Filter>
+    </ClCompile>
+    <ClCompile Include="src\util\FastCharStream.cpp">
+      <Filter>Source Files\util</Filter>
+    </ClCompile>
+    <ClCompile Include="src\analysis\standard\StandardFilter.cpp">
+      <Filter>Source Files\analysis\standard</Filter>
+    </ClCompile>
+    <ClCompile Include="src\util\StringBuffer.cpp">
+      <Filter>Source Files\util</Filter>
+    </ClCompile>
+    <ClCompile Include="src\store\IndexOutput.cpp">
+      <Filter>Source Files\store</Filter>
+    </ClCompile>
+    <ClCompile Include="src\index\SegmentInfos.cpp">
+      <Filter>Source Files\index</Filter>
+    </ClCompile>
+    <ClCompile Include="src\index\FieldsWriter.cpp">
+      <Filter>Source Files\index</Filter>
+    </ClCompile>
+    <ClCompile Include="src\index\TermInfo.cpp">
+      <Filter>Source Files\index</Filter>
+    </ClCompile>
+    <ClCompile Include="src\index\TermVectorReader.cpp">
+      <Filter>Source Files\index</Filter>
+    </ClCompile>
+    <ClCompile Include="src\debug\MemTracking.cpp">
+      <Filter>Source Files\debug</Filter>
+    </ClCompile>
+    <ClCompile Include="src\index\TermInfosWriter.cpp">
+      <Filter>Source Files\index</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\document\Document.h">
+      <Filter>Header Files\document</Filter>
+    </ClInclude>
+    <ClInclude Include="src\document\Posting.h">
+      <Filter>Header Files\document</Filter>
+    </ClInclude>
+    <ClInclude Include="src\document\PostingList.h">
+      <Filter>Header Files\document</Filter>
+    </ClInclude>
+    <ClInclude Include="src\index\IndexWriter.h">
+      <Filter>Header Files\index</Filter>
+    </ClInclude>
+    <ClInclude Include="src\index\Token.h">
+      <Filter>Header Files\index</Filter>
+    </ClInclude>
+    <ClInclude Include="src\index\IndexReader.h">
+      <Filter>Header Files\index</Filter>
+    </ClInclude>
+    <ClInclude Include="src\search\Collector.h">
+      <Filter>Header Files\search</Filter>
+    </ClInclude>
+    <ClInclude Include="src\search\DocScorePair.h">
+      <Filter>Header Files\search</Filter>
+    </ClInclude>
+    <ClInclude Include="src\search\IndexSearcher.h">
+      <Filter>Header Files\search</Filter>
+    </ClInclude>
+    <ClInclude Include="src\search\Query.h">
+      <Filter>Header Files\search</Filter>
+    </ClInclude>
+    <ClInclude Include="src\search\QueryParser.h">
+      <Filter>Header Files\search</Filter>
+    </ClInclude>
+    <ClInclude Include="src\search\Scorer.h">
+      <Filter>Header Files\search</Filter>
+    </ClInclude>
+    <ClInclude Include="src\search\TermQuery.h">
+      <Filter>Header Files\search</Filter>
+    </ClInclude>
+    <ClInclude Include="src\search\TermScorer.h">
+      <Filter>Header Files\search</Filter>
+    </ClInclude>
+    <ClInclude Include="src\document\Field.h">
+      <Filter>Header Files\document</Filter>
+    </ClInclude>
+    <ClInclude Include="src\util\VoidMap.h">
+      <Filter>Header Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\util\Equators.h">
+      <Filter>Header Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\index\Term.h">
+      <Filter>Header Files\index</Filter>
+    </ClInclude>
+    <ClInclude Include="src\store\RAMDirectory.h">
+      <Filter>Header Files\store</Filter>
+    </ClInclude>
+    <ClInclude Include="src\store\TransactionalRAMDirectory.h">
+      <Filter>Header Files\store</Filter>
+    </ClInclude>
+    <ClInclude Include="src\store\Directory.h">
+      <Filter>Header Files\store</Filter>
+    </ClInclude>
+    <ClInclude Include="src\util\VoidList.h">
+      <Filter>Header Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\analysis\AnalysisHeader.h">
+      <Filter>Header Files\analysis</Filter>
+    </ClInclude>
+    <ClInclude Include="src\util\StringIntern.h">
+      <Filter>Header Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\store\FSDirectory.h">
+      <Filter>Header Files\store</Filter>
+    </ClInclude>
+    <ClInclude Include="src\util\Misc.h">
+      <Filter>Header Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\debug\Lanbase.h">
+      <Filter>Header Files\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="src\index\FieldInfos.h">
+      <Filter>Header Files\index</Filter>
+    </ClInclude>
+    <ClInclude Include="src\util\StreamBase.h">
+      <Filter>Header Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\util\StringReader.h">
+      <Filter>Header Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\util\BufferedStream.h">
+      <Filter>Header Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\util\InPutStreamBuffer.h">
+      <Filter>Header Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\util\SubInPutStream.h">
+      <Filter>Header Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\util\Reader.h">
+      <Filter>Header Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\util\FileInPutStream.h">
+      <Filter>Header Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\index\DocumentWriter.h">
+      <Filter>Header Files\index</Filter>
+    </ClInclude>
+    <ClInclude Include="src\analysis\standard\StandardAnalyzer.h">
+      <Filter>Header Files\analysis\standard</Filter>
+    </ClInclude>
+    <ClInclude Include="src\analysis\Analyzers.h">
+      <Filter>Header Files\analysis</Filter>
+    </ClInclude>
+    <ClInclude Include="src\analysis\standard\StandardFilter.h">
+      <Filter>Header Files\analysis\standard</Filter>
+    </ClInclude>
+    <ClInclude Include="src\analysis\standard\StandardTokenizer.h">
+      <Filter>Header Files\analysis\standard</Filter>
+    </ClInclude>
+    <ClInclude Include="src\util\FastCharStream.h">
+      <Filter>Header Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\analysis\standard\StandardTokenizerConstants.h">
+      <Filter>Header Files\analysis\standard</Filter>
+    </ClInclude>
+    <ClInclude Include="src\util\StringBuffer.h">
+      <Filter>Header Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\store\IndexOutput.h">
+      <Filter>Header Files\store</Filter>
+    </ClInclude>
+    <ClInclude Include="src\LConfig.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\config\CompilerMsvc.h">
+      <Filter>Header Files\config</Filter>
+    </ClInclude>
+    <ClInclude Include="src\index\SegmentInfos.h">
+      <Filter>Header Files\index</Filter>
+    </ClInclude>
+    <ClInclude Include="src\index\FieldsWriter.h">
+      <Filter>Header Files\index</Filter>
+    </ClInclude>
+    <ClInclude Include="TermInfo.h">
+      <Filter>Header Files\index</Filter>
+    </ClInclude>
+    <ClInclude Include="src\debug\mem.h">
+      <Filter>Source Files\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="src\index\TermVector.h">
+      <Filter>Header Files\index</Filter>
+    </ClInclude>
+    <ClInclude Include="src\index\TermInfosWriter.h">
+      <Filter>Header Files\index</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
